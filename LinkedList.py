@@ -71,7 +71,7 @@ class LinkedList:
         # Search for first occurance of data_after value in linked list
         # Now insert data_to_insert after data_after node
         itr = self.head
-        while itr:
+       nt while itr:
             if itr.data == data_after:
                 itr.next = Node(data_to_insert,itr.next)
                 break
