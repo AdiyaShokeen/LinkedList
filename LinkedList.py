@@ -66,7 +66,31 @@ class LinkedList:
                 break
             itr = itr.next
             count += 1
-       
+            
+    def insert_after_value(self, data_after, data_to_insert):
+        # Search for first occurance of data_after value in linked list
+        # Now insert data_to_insert after data_after node
+        itr = self.head
+        while itr:
+            if itr.data == data_after:
+                itr.next = Node(data_to_insert,itr.next)
+                break
+            itr = itr.next
+
+    
+
+    def remove_by_value(self, data):
+        # Remove first node that contains data
+        itr = self.head
+        count = 0
+        while itr:
+            if itr.data == data:
+                self.remove_at(count)
+                break
+            count += 1
+            itr = itr.next
+                
+    
     
     def print(self):
         if self.head is None:
