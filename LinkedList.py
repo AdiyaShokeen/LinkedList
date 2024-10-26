@@ -71,7 +71,7 @@ class LinkedList:
         # Search for first occurance of data_after value in linked list
         # Now insert data_to_insert after data_after node
         itr = self.head
-       nt while itr:
+       while itr:
             if itr.data == data_after:
                 itr.next = Node(data_to_insert,itr.next)
                 break
@@ -98,10 +98,12 @@ class LinkedList:
             return
 
         itr = self.head
+        llstr = ""
         while itr:
-            print(str(itr.data))
+            llstr += str(itr.data) + " --> "
             itr = itr.next
-
+        print(llstr)
+            
     def get_len(self):
         counter = 0
         itr = self.head
